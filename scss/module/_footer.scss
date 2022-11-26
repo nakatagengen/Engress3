@@ -1,0 +1,85 @@
+@use "../mixin/responsive" as res;
+@use "../setting/variable" as var;
+
+.footer {
+  background-color: var.$top-color;
+
+  &__inner {
+    max-width: 930px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+  }
+  &__top {
+    padding: 40px 15px 70px;
+    display: flex;
+    justify-content: space-between;
+    @include res.footer {
+      display: block;
+      padding-bottom: 50px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    width: 197px;
+    height: 58px;
+    background-color: #fff;
+   position: relative;
+   @include res.footer {
+    margin-top: 30px;
+   }
+  }
+  &__logo {
+    width: 159px;
+    height: 31px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__phone-text {
+    text-align: right;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 27px;
+    margin-bottom: 5px; 
+    @include res.footer {
+      text-align: center;
+    }
+  }
+  &__phone-icon {
+    width: 10px;
+    height: 14px;
+    margin-right: 5px;
+  }
+  &__time {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: right;
+    @include res.footer {
+      text-align: center;
+    }
+  }
+  &__text {
+    text-align: center;
+  }
+ &__copy-right {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #F8F8F8;
+  color: var.$top-color;
+  // padding: 12px 0;
+  position: relative;
+  height: 36px;
+ }
+ 
+}
+
+.copy-right {
+  position: absolute;
+  right: 14%;
+  top: 50%;
+  transform: translateY(-50%);
+}

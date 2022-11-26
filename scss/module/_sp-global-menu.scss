@@ -1,0 +1,46 @@
+@use "../mixin/responsive" as res;
+@use "../setting/variable" as var;
+
+.sp-global-menu {
+  // display: none;
+  position: fixed;
+  z-index: 4;
+  width: 380px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  height: 100vh;
+  background-color: var.$top-color;
+  color: #fff;
+  transform: translateX(380px);
+  transition: 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  padding: calc((100vh - 600px) / 2) 0;
+  @include res.sp {
+    width: 100%;
+    transform: translateX(100%);
+    padding: calc((100vh - 500px) / 2) 0;
+  }
+ 
+  &__item {
+    &:not(:first-of-type) {
+      margin-top: 25px;
+    }
+  }
+  &__link {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+}
+.is-drawerActive {
+  .sp-global-menu {
+    transform: translateX(0px);
+  transition: 0.3s;
+
+  }
+}

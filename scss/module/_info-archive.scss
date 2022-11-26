@@ -1,0 +1,31 @@
+@use "../mixin/responsive" as res;
+@use "../setting/variable" as var;
+
+
+.info-archive {
+  margin-top: 58px;
+  &__list {
+    margin-top: 45px;
+    color: var.$top-color;
+    font-size: 1.6rem;
+  }
+  &__item {
+    display: flex;
+    border-top: 1px solid #D5D5D5;
+    padding: 24px 0;
+    @include res.blog {
+      display: block;
+      padding: 20px 0;
+    }
+  }
+  &__link {
+    margin-left: 5.5%;
+    text-decoration: underline;
+    text-decoration-color: var.$top-color;
+    color: var.$top-color;
+    @include res.blog {
+      margin-left: 0;
+    }
+  }
+  
+}

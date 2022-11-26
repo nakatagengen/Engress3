@@ -1,0 +1,65 @@
+@use "../setting/variable" as var;
+@use "../mixin/responsive" as res;
+
+
+.flow {
+  padding-bottom: 0;
+  &__content {
+    margin-top: 53px;
+    // margin-bottom: 15px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+    color: var.$top-color;
+    height: 64px;
+    &:not(:first-of-type) {
+      margin-top: 8px;
+      @include res.sp {
+        margin-top: 15px;
+      }
+    }
+    @include res.sp {
+      flex-wrap: wrap;
+      height: auto;
+    }
+  }
+  
+  &__num {
+    color: #fff;
+    font-size: 1.6rem;
+    min-width: 64px;
+    height: 64px;
+    line-height: 64px;
+    background-color: #F5A623;
+    text-align: center;
+    @include res.sp {
+     height: 32px;
+     line-height: 32px;
+    }
+  }
+  &__name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 31.0555%;
+    padding-left: 21px;
+    @include res.sp {
+      width: 70%;
+    }
+  }
+  &__text {
+    width: 68.9444%;
+    padding-left: 53.5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    font-size: 1.6rem;
+    border-left: 1px solid #C3C3C3;
+    @include res.sp {
+      width: 100%;
+      border-left: none;
+      padding: 13px 15px;
+    }
+  }
+
+}

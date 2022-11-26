@@ -1,0 +1,21 @@
+
+@use "../mixin/responsive" as res;
+
+$font-color : #1B224C;
+.gnav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    color: $font-color;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 28px;
+  }
+ &_tab {
+  @include res.tab {
+    display: none;
+  }
+ }
+}

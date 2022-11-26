@@ -1,0 +1,34 @@
+$tab: 1024px; // タブレット
+$card: 900px; //カード
+$blog: 750px; //ブログ一覧
+$footer: 690px; //フッター
+$sp: 599px;  // スマホ
+
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+@mixin card {
+  @media (max-width: ($card)) {
+    @content;
+  }
+}
+@mixin footer {
+  @media (max-width: ($footer)) {
+    @content;
+  }
+}
+@mixin blog {
+  @media (max-width: ($blog)) {
+    @content;
+  }
+}
+
+

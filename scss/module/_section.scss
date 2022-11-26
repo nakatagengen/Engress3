@@ -1,0 +1,36 @@
+@use "../setting/variable" as var;
+@use "../mixin/responsive" as res;
+
+
+.section {
+  padding: 60px 0;
+  &_navy {
+    background-color: var.$top-color;
+  }
+  &__inner {
+    max-width: 930px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+  }
+  &__title {
+    font-size: 3.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: var.$top-color;
+    &_navy {
+      color: #fff;
+    }
+    @include res.sp {
+      font-size: 2.8rem;
+      
+    }
+  }
+
+  &__sub-page-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var.$top-color;
+    text-align: center;
+  }
+}

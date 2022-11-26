@@ -1,0 +1,64 @@
+@use "../mixin/responsive" as res;
+@use "../setting/variable" as var;
+
+.media {
+  @include res.sp {
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 59px;
+    @include res.sp {
+      display: block;
+      margin-top: 50px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid var.$top-color;
+    }
+  }
+  &__text {
+    width: 55%;
+    color: var.$top-color;
+    @include res.sp {
+      width: 100%;
+    }
+    &_order {
+      order: 10;
+    }
+  }
+  &__num {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    background-color: #F5A623;
+  }
+  &__head {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-top: 35px;
+    @include res.sp {
+      font-size: 2.4rem;
+    }
+  }
+  &__copy {
+    font-size: 1.6rem;
+    margin-top: 39px;
+    @include res.sp {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    
+  }
+  &__img {
+    width: 38%;
+    @include res.sp {
+      width: 100%;
+    }
+  }
+}
+
+.media-img {
+  height: 100%;
+}

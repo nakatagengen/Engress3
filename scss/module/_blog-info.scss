@@ -1,0 +1,116 @@
+@use "../setting/variable" as var;
+@use "../mixin/responsive" as res;
+
+.blog-info {
+  padding-top: 30px;
+  padding-bottom: 120px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    @include res.footer {
+      display: block;
+    }
+  }
+  &__blog {
+    width: 47.777%;
+    @include res.footer {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include res.sp {
+      width: 100%;
+    }
+  }
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var.$top-color;
+    margin-bottom: 30px;
+    @include res.footer {
+      text-align: center;
+    }
+  }
+  &__item {
+    
+    &:not(:first-of-type) {
+      margin-top: 31px;
+    }
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    // width: 47.77%;
+    max-width: 430px;
+    min-height: 110px;
+    position: relative;
+  }
+  &__type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // width: 78px;
+    // height: 23px;
+    text-align: center;
+    padding: 5px 9px ;
+    color: #fff;
+    background-color: var.$top-color;
+    font-size: 1.2rem;
+
+  }
+  &__img {
+    width: 34.883%;
+    display: block;
+  }
+  &__text {
+    width: 60.465%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  &__sub-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var.$top-color;
+    text-decoration: underline;
+    text-decoration-color: var.$top-color;
+    // border-bottom: 1px solid var.$top-color;
+  }
+  &__date {
+    font-size: 1.2rem;
+    color: var.$top-color;
+  }
+
+  &__info {
+    width: 44.666%;
+    @include res.footer {
+      width: 80%;
+      margin: 50px auto 0;
+      // margin-top: 50px;
+    }
+    @include res.sp {
+      width: 100%;
+    }
+  }
+  &__info-date {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: var.$top-color;
+  }
+  &__info-sub-title {
+    font-size: 1.6rem;
+    color: var.$top-color;
+    text-decoration: underline;
+    text-decoration-color: var.$top-color;
+  }
+  &__info-item {
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    &:not(:first-of-type) {
+      margin-top: 17px;
+    }
+  }
+
+}

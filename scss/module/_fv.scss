@@ -1,0 +1,148 @@
+@use "../mixin/responsive" as res;
+@use "btn";
+@use "../setting/variable" as var;
+
+.fv {
+  height: 556px;
+  // padding-top: 80px;
+  background-image: url(../img/fv.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 0 15px;
+  position: relative;
+  @include res.sp {
+    height: 500px;
+  }
+  &__contents {
+    min-width: 220px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateY(-70%) translateX(-50%);
+    @include res.sp {
+      top: 40%;
+      left: 50%;
+      transform: translateY(-40%) translateX(-50%);
+    }
+  }
+  &__title {
+    // margin-top: 80px;
+    // padding-top: 196px;
+    font-size: 4.8rem;
+    font-weight: bold;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    @include res.sp {
+      font-size: 3.5rem;
+      padding-top: 130px;
+    }
+  }
+  &__copy {
+    font-size: 1.8rem;
+    margin-top: 25px;
+    @include res.sp {
+      font-size: 1.6rem;
+      margin-top: 20px;
+    }
+    &_sp {
+      @include res.sp {
+        display: none;
+      }
+    }
+  }
+  &__contact {
+    display: inline-block;
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: underline;
+    margin-top: 22px;
+    transition: .3s;
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 0.451);
+      transition: .3s;
+    }
+    @include res.sp {
+      margin-top: 10px;
+      font-size: 1.4rem;
+    }
+  }
+  &__btn {
+    margin-top: 50px;
+    // display: block;
+    @include res.sp {
+      margin-top: 20px;
+    }
+  }
+}
+
+
+.fv-buttom {
+ text-align: center;
+  &__content {
+    text-align: center;
+    color: #fff;
+  }
+ 
+ 
+  &__text {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    margin-bottom: 83px;
+    @include res.sp {
+      display: block;
+      margin-top: 50px;
+      margin-bottom: 60px;
+    }
+  }
+  &__p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 170px;
+    &:not(:first-of-type) {
+      margin-left: 30px;
+      @include res.sp {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+    @include res.sp {
+      font-size: 1.6rem;
+      width: 100%;
+      // margin-left: 0;
+    }
+  }
+}
+
+.sub-fv {
+  height: 301px;
+  background-image: url(../img/prece-fv@2x.png);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  &_blog {
+    background-image: url(../img/blog-fv@2x.png);
+  }
+  &_info {
+    background-image: url(../img/news-fv@2x.png);
+  }
+  &_contact {
+    background-image: url(../img/contact-fv@2x.png);
+  }
+  &__title {
+    color: #fff;
+    font-size: 3.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -63%);
+    @include res.sp {
+      font-size: 2.5rem;
+    }
+    
+  }
+}

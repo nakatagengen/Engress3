@@ -1,0 +1,21 @@
+@use "../mixin/responsive" as res;
+@use "../setting/variable" as var;
+
+.contact-fin {
+  padding: 180px 0;
+  &__text {
+    text-align: center;
+    color: var.$top-color;
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  &__link {
+    display: inline-block;
+    margin: 80px 0;
+    color: var.$top-color;
+    text-decoration: underline;
+    text-decoration-color: var.$top-color;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}

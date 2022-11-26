@@ -1,0 +1,28 @@
+@use "../setting/variable" as var;
+@use "../mixin/responsive" as res;
+
+.phone-text {
+  text-align: center;
+  padding: 20px 15px;
+  color: var.$top-color;
+  &__text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    &_link {
+      color: var.$top-color;
+    }
+  }
+  &__phone-num {
+    font-size: 3.6rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 20px;
+    @include res.sp {
+      display: block;
+    }
+  }
+  &__time {
+    font-size: 1.6rem;
+    font-weight: normal;
+  }
+}

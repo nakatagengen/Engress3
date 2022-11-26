@@ -1,0 +1,173 @@
+@use '../setting/variable' as var;
+@use '../mixin/responsive' as res;
+
+.contact {
+  margin-top: 58px;
+  margin-bottom: 82px;
+  padding-bottom: 75px;
+  &__inner {
+    max-width: 730px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    p {
+      font-size: 1.6rem;
+      color: var.$top-color;
+    }
+  }
+}
+.mw_wp_form {
+  margin-top: 40px;
+  input, textarea {
+    font-size: 1.2rem;
+    padding: 19px 20px;
+    // margin-top: 12px;
+    // margin-bottom: 20px;
+    border: 1px solid var.$top-color;
+    width: 100%;
+  }
+  
+  p {
+    margin-top: 20px;
+  }
+  a {
+    color: #F5A623;
+    border-bottom: 1px solid #F5A623;
+  }
+  button {
+  //  margin: 0 auto;
+   color: #fff;
+   background-color: var.$top-color;
+   padding: 16px 0;
+   margin: 0 auto;
+   width: 200px;
+   position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+    border-radius: 5px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .horizontal-item {
+    margin-left: 0 !important;
+  }
+  
+  
+  .mwform-radio-field {
+    position: relative;
+    // margin-bottom: 18px;
+    
+    label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+      
+      input {
+        width: 20px;
+        margin: 0;
+        display: none;
+      }
+      span {
+        width: 100%;
+        margin-left: 40px;
+      }
+    }
+    input+span::before, 
+    span::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      border-radius: 100%;
+      transition: all .2s;
+    }
+    input+span::before {
+      // display: block;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      margin-top: -8px;
+      // background: #f3f3f3;/* ラジオボタンの元の色の指定*/
+      border: 1px solid #707070;
+      // padding: 3px;
+  }
+  
+  input+span::after {
+    opacity: 0;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    margin-top: -4px;
+    background: #000;/* ラジオボタンのチェックした時の色の指定*/
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+  
+  
+input:checked + span::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+  }
+  .mwform-checkbox-field {
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      // text-align: center;
+      input {
+        width: 20px;
+        height: 20px;
+        display: none;
+        
+      }
+      span {
+        // width: 100%;
+        // margin-left: 15px;
+        padding-left: 35px;
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          // position: absolute;
+        }
+        &::before {
+          display: block;
+          width: 20px;
+          height: 20px;
+          border: 1px solid var.$top-color;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &::after {
+          display: none;
+        }
+        
+      }
+      input:checked + span::after {
+        
+          display: block;
+          width: 14px;
+          height: 7px;
+          border-left: 3px solid #000;
+          border-bottom: 3px solid #000;
+          transform: rotate(-45deg);
+          position: absolute;
+          left: 2px;
+          top: 30%;
+          
+        
+      }
+    }
+    &~.error {
+      width: 103px;
+      margin: 0 auto;
+   }
+  }
+}
+

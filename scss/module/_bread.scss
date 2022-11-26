@@ -1,0 +1,36 @@
+@use '../setting/variable' as var;
+@use '../mixin/responsive' as res;
+
+
+.breadcrumbs {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #F8F8F8;
+  &__inner {
+    max-width: 930px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    span {
+      color: var.$top-color;
+      font-size: 1.2rem;
+      &:not(:first-of-type) {
+        margin-left: 6px;
+      }
+    }
+    a {
+      color: var.$top-color;
+      font-size: 1.2rem;
+      border-bottom: 1px solid var.$top-color;
+      &:first-of-type {
+        margin-right: 6px;
+      }
+    }
+  }
+  &_pt {
+    padding-top: 100px;
+    @include res.sp {
+      padding-top: 80px;
+    }
+  }
+}

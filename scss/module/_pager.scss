@@ -1,0 +1,43 @@
+@use "../setting/variable" as var;
+@use "../mixin/responsive" as res;
+
+.page-numbers {
+  display: flex;
+  justify-content: center;
+  li {
+    margin-left: 20px;
+    a {
+      display: block;
+      border: 1px solid var.$top-color;
+      padding: 17px 20px;
+      color: var.$top-color;
+      font-size: 1.6rem;
+      font-weight: bold;
+      @include res.sp {
+        padding: 15px ;
+      }
+      
+    }
+    .current {
+      display: block;
+      padding: 17px 20px;
+      color: #fff;
+      background-color: var.$top-color;
+      font-size: 1.6rem;
+      font-weight: bold;
+      @include res.sp {
+        padding: 15px ;
+      }
+      
+    }
+    span {
+      font-size: 1.6rem;
+      font-weight: bold;
+      padding: 15px 18px;
+      height: 100%;
+    }
+  }
+}
+.pagination {
+  margin: 45px 0;
+}

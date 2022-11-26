@@ -1,0 +1,48 @@
+
+@use "../setting/variable" as var;
+@use "../mixin/responsive" as res;
+.btn {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 18px 43px;
+  background-color: #F5A623;
+  border-radius: 5px;
+  
+  
+  &_contact {
+    padding: 18px 26px;
+    background-color: var.$top-color;
+    margin-left: 10px;
+  }
+  &_size_l {
+    padding: 22px 93px;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    transition: .3s;
+    
+    &:hover,
+    &:focus {
+      a {
+
+        color: #F5A623; 
+        transition: .3s;
+      }
+      background-color: #fff;
+      border: 1px solid #F5A623;
+      transition: .3s;
+    }
+     
+    @include res.sp {
+      padding: 20px 80px;
+    }
+    &-long {
+      padding: 16px 108px;
+    }
+  }
+  &__link {
+    color: #fff;
+  }
+
+}

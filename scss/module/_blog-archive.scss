@@ -1,0 +1,91 @@
+@use "../setting/variable" as var;
+@use "../mixin/responsive" as res;
+
+.blog-archive {
+  padding: 60px 0;
+  &__head {
+    margin-bottom: 60px;
+  }
+  h4 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    @include res.blog {
+      font-size: 1.8rem;
+    }
+  }
+ 
+  &__content {
+    margin-top: 60px;
+  }
+  &__item {
+    &:not(:last-of-type) {
+      margin-bottom: 60px;
+      @include res.blog {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    min-height: 148px;
+    @include res.blog {
+      justify-content: flex-start;
+    }
+  }
+  &__type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: var.$top-color;
+    // width: 80px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+  &__img {
+    width: 240px;
+    height: 175px;
+    @include res.blog {
+      width: 170px;
+      height: 125px;
+    }
+  }
+  &__text {
+    width: 67.777%;
+    color: var.$top-color;
+    margin-left: 20px;
+    max-height: 175px;
+    overflow: hidden;
+    p {
+      font-size: 1.6rem;
+    line-height: 1.5;
+    margin-top: 20px;
+    @include res.blog {
+      display: none;
+    }
+    
+    }
+  }
+  &__date {
+    font-size: 1.6rem;
+  }
+  &__title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: var.$top-color;
+    margin-top: 20px;
+    @include res.blog {
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+  }
+  
+  
+
+
+}
